@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Assigment 1</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/maincss.css">
+		<script src="script/library/jquery-1.11.3.min.js"></script>
+		<script src="script/jquery_script.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js"></script>
+		<script src="script/library/angular.min.js"></script>
+		<script src="script/angular_script.js"></script>
+	</head>
+	<body ng-app="WeatherApp">
+		<div class="container-fluid" id="full_page">
+			<div class="container" ng-controller="MainController" id="ContainerId">
+				<div class="row">
+					<div class="col-ms-12 col-md-12">
+						<div id="map"></div>
+					</div>
+				</div>			
+				<div class="jumbotron col-ms-12 col-md-12" id="weather-container">
+						<div class="row" id="weather-head">
+								<div class="col-sm-2 col-md-3 back-to-left">PLACE</div>
+								<div class="col-sm-2 col-md-3 back-to-left">WEATHER</div>
+								<div class="col-sm-1 col-md-1"><img class="icon" src="img/therm_icon.png"></div>
+								<div class="col-sm-3 col-md-2">WINDFORCE</div>
+								<div class="col-sm-3 col-md-2">CLOUDINESS</div>
+								<div class="col-sm-1 col-md-1"><a href=""><img class="btn-x-head btn-x" src="img/x-button.png"></a></div>
+						</div>
+						<div class="row row-weather" ng-repeat="city in weatherdata">
+							<weather-info info="city" id="weather-city"></weather-info>
+							<div class="col-md-1"><a href="" ng-click="remove(city.index, false)"><img class="btn-x" src="img/x-button.png"></a></div>
+						</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

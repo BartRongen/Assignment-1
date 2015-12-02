@@ -1,0 +1,5 @@
+<div class="offset col-sm-2 col-md-3 back-to-left">{{ info.name }}</div>
+<div class="col-sm-2 col-md-3 back-to-left"><img class="icon" ng-src="{{ info.weather[0].icon }}">{{ info.weather[0].description.toLowerCase() }}</div>
+<div class="offset col-sm-1 col-md-1">{{ info.main.temp }}°</div>
+<div class="col-sm-3 col-md-2">{{ info.wind.speed }}  <img class="icon" ng-src="img/{{ info.wind.degicon }}"></div>
+<div class="offset col-sm-3 col-md-2">{{ info.clouds.all }}%</div>
